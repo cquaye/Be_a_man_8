@@ -7,7 +7,7 @@ resource "google_compute_firewall" "kayleigh-allow-http" {
 
   allow {
     protocol = "tcp"
-    ports    = ["80", "443"]
+    ports    = ["80"]
   }
   target_tags = [ "karen" ]
 
@@ -21,7 +21,7 @@ resource "google_compute_firewall" "cooper-allow-http" {
 
   allow {
     protocol = "tcp"
-    ports    = ["80", "443"]
+    ports    = ["80"]
   }
   target_tags = [ "brenda" ]
 
@@ -36,7 +36,7 @@ resource "google_compute_firewall" "carol-allow-http" {
 
   allow {
     protocol = "tcp"
-    ports    = ["80", "443"]
+    ports    = ["80"]
   }
    target_tags = [ "carol" ]
 
