@@ -7,7 +7,7 @@
 resource "google_compute_instance" "linux-instance-test1" {
   name         = "tokyo"
   machine_type = "n2-standard-2"
-  zone         = "asia-northeast1-a"
+  zone         = "${var.region_asia}-a"
 
   tags = ["karen"]
 
@@ -34,7 +34,7 @@ resource "google_compute_instance" "linux-instance-test1" {
 resource "google_compute_instance" "linux-instance-test2" {
   name         = "kyoto"
   machine_type = "n2-standard-2"
-  zone         = "asia-northeast1-b"
+  zone         = "${var.region_asia}-b"
 
   tags = ["brenda"]
 
@@ -60,7 +60,7 @@ resource "google_compute_instance" "linux-instance-test2" {
 resource "google_compute_instance" "linux-instance-test3" {
   name         = "osaka"
   machine_type = "n2-standard-2"
-  zone         = "asia-northeast1-c"
+  zone         = "${var.region_asia}-c"
 
   tags = ["carol"]
 
@@ -93,8 +93,7 @@ resource "google_compute_instance" "linux-instance-test3" {
 resource "google_compute_instance" "windows-instance-test1" {
   name         = "iowa"
   machine_type = "n2-standard-4"
-  zone         = "us-central1-a"
-
+  zone         = "${var.region_us}-a"
   tags = ["kayleigh"]
 
   boot_disk {
@@ -119,7 +118,7 @@ resource "google_compute_instance" "windows-instance-test1" {
 resource "google_compute_instance" "windows-instance-test2" {
   name         = "brazil"
   machine_type = "n2-standard-4"
-  zone         = "southamerica-east1-a"
+  zone         = "${var.region_brazil}-a"
 
   tags = ["cooper"]
 
