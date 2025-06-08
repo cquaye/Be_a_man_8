@@ -6,7 +6,7 @@
 # ----linux web server for iowa ----
 resource "google_compute_instance" "linux-instance-test1" {
   name         = "tokyo"
-  machine_type = "n2-standard-2"
+  machine_type = var.medium
   zone         = "${var.region_asia}-a"
 
   tags = ["karen"]
@@ -33,7 +33,7 @@ resource "google_compute_instance" "linux-instance-test1" {
 # ----linux web server for saopaulo ----
 resource "google_compute_instance" "linux-instance-test2" {
   name         = "kyoto"
-  machine_type = "n2-standard-2"
+  machine_type = var.medium
   zone         = "${var.region_asia}-b"
 
   tags = ["brenda"]
@@ -59,7 +59,7 @@ resource "google_compute_instance" "linux-instance-test2" {
 # ----linux web server for iowa and saopaulo ----
 resource "google_compute_instance" "linux-instance-test3" {
   name         = "osaka"
-  machine_type = "n2-standard-2"
+  machine_type = var.medium
   zone         = "${var.region_asia}-c"
 
   tags = ["carol"]
