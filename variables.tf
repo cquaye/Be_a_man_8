@@ -1,5 +1,5 @@
 variable "region_us" {
-    default = "us-central"
+    default = "us-central1"
     type    = string
     description = "region for us"
 }
@@ -38,6 +38,7 @@ variable "brazil_cider_range" {
 }
 
 variable "medium" {
+ default = "e2-medium"
   type   = string
   description = "linux machine type"
 }
